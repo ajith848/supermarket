@@ -1,0 +1,141 @@
+/* *{
+    background: url("../static/img1.jpg") no-repeat center center fixed;
+    background-size: cover;
+} */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("../image/img2.jpg") ;
+    background-size: cover;
+} 
+   
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:transparent;
+    padding: 10px;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    color: white;
+}
+.brand-title:hover {
+    color: orange;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar-links li {
+    margin: 0 10px;
+    position: relative;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: white;
+    padding: 7px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    background-color: #575757;
+}
+
+.toggle-button {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.toggle-button .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s;
+}
+
+#image{
+    position: absolute;
+    width:100%;
+    top:0;
+    left:0;
+    height: auto;
+    background-repeat: no-repeat;
+    background: fill;
+    z-index: 1;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: 10px;
+        width: 100%;
+        display: block;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+.container{
+    position: absolute;
+    background: fixed;
+    background-repeat: no-repeat;
+}
